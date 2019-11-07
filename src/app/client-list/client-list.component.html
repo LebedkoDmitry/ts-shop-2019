@@ -1,1 +1,11 @@
-<p>client-list works!</p>
+<table>
+  <thead></thead>
+  <tbody>
+    <tr *ngFor="let client of clients">
+      <td>{{client.name}}</td>
+      <td>{{client.surname}}</td>
+      <td>{{client.birthdate}}</td>
+    </tr>
+  </tbody>
+  <tfoot></tfoot>
+</table>

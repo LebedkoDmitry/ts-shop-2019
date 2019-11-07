@@ -12,9 +12,14 @@ const routes: Routes = [
     component: AuthComponent
   },
   {
-    path: '',
+    path: 'clients',
     component: ClientListComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path: '',
+    redirectTo: '/clients',
+    pathMatch: 'full'
   },
   {
     path: '**',
