@@ -35,7 +35,7 @@ export class AuthService {
   }
 
   public isAuthenticated(): boolean {
-    return this.expiresAt != null;
+    return this.expiresAt != null && (new Date().getTime() <= this.expiresAt);
   }
 
 }
